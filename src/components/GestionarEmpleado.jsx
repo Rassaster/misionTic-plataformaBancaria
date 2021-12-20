@@ -11,16 +11,19 @@ export function GestionarEmpleado() {
 	const [empleados, setEmpleados] = useState([])
 	const [followUp, setFollowUp] = useState(false)
 
+	
+	async function effectEmpleados() {
+		const empleadosList = await Axios.post(`${process.env.REACT_APP_URL}/getEmployees`, {
+			tipoUsuario: "cliente"
+		})
+		// console.log("empleadosList", empleadosList.data)
+		setEmpleados(empleadosList.data)
+	}
+
 	useEffect(() => {
-		async function effectEmpleados() {
-			const empleadosList = await Axios.post(`${process.env.REACT_APP_URL}/getEmployees`, {
-				tipoUsuario: "cliente"
-			})
-			// console.log("empleadosList", empleadosList.data)
-			setEmpleados(empleadosList.data)
-		}
 		effectEmpleados()
-	}, [])
+	},[empleados]);
+	
 
 	const [isOpenModal, openModal, closeModal] = useModal(false)
 	const [isOpenModal2, openModal2, closeModal2] = useModal(false)
@@ -35,6 +38,7 @@ export function GestionarEmpleado() {
 		// 	alert('Empleado eliminado')
 		// else
 		// 	console.log('falso')
+		effectEmpleados()
 	}
 	return (
 		<div>
