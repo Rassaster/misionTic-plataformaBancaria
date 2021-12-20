@@ -40,6 +40,11 @@ export function GestionarEmpleado() {
 		// 	console.log('falso')
 		effectEmpleados()
 	}
+
+	async function changeRol(id, typeUsr) {
+		console.log('changeRol', id, typeUsr)
+	}
+
 	return (
 		<div>
 			<button className="btn btn-primary my-2" onClick={openModal}>Crear nuevo empleado</button>
@@ -80,6 +85,7 @@ export function GestionarEmpleado() {
 												/>
 											</Modal>
 											<button className="btn btn-danger" onClick={() => deleteEmployee(e._id)}>Eliminar</button>
+											<button className="btn btn-warning" onClick={() => changeRol(e._id, e.tipoUsuario)}>Cambiar rol</button>
 										</div>
 									</td>
 								</tr>
