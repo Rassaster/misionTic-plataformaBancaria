@@ -37,7 +37,7 @@ const ManejoCuentas = () => {
 		event.preventDefault()
 	}
 
-	async function cancelCtaById (id, doc) {
+	async function cancelCtaById(id, doc) {
 		const opeOut = await Axios.post(`${process.env.REACT_APP_URL}/exeChangeState`, {
 			id,
 			estado: "cancelada"
@@ -46,7 +46,7 @@ const ManejoCuentas = () => {
 		console.log(opeOut);
 	}
 
-	async function activateCtaById (id, doc) {
+	async function activateCtaById(id, doc) {
 		const opeOut = await Axios.post(`${process.env.REACT_APP_URL}/exeChangeState`, {
 			id,
 			estado: "activa"
@@ -55,7 +55,7 @@ const ManejoCuentas = () => {
 		console.log(opeOut);
 	}
 
-	async function rejectCtaById (id, doc) {
+	async function rejectCtaById(id, doc) {
 		const opeOut = await Axios.post(`${process.env.REACT_APP_URL}/exeChangeState`, {
 			id,
 			estado: "rechazada"
@@ -87,7 +87,7 @@ const ManejoCuentas = () => {
 				<div className="form-text">{aviso}</div>
 			</div>
 			{Boolean(aviso[0] === 'C') &&
-				<div>					
+				<div>
 					<table className="table table-hover">
 						<thead>
 							<tr>
@@ -110,20 +110,20 @@ const ManejoCuentas = () => {
 													return (<button className='btn btn-danger' onClick={() => cancelCtaById(e.id, e.doc)}>
 														Cancelar
 													</button>)
-												} else if (e.estado === 'pendiente apertura') {
+												} else if (e.estado === 'pendActivacion') {
 													return (<><button className='btn btn-success' onClick={() => activateCtaById(e.id, e.doc)}>
 														Abrir Cta
 													</button>
-													<button className='btn btn-danger' onClick={() => rejectCtaById(e.id, e.doc)}>
-														Denegar
-													</button></>)
-												} else if (e.estado === 'pendiente cierre') {
+														<button className='btn btn-danger' onClick={() => rejectCtaById(e.id, e.doc)}>
+															Denegar
+														</button></>)
+												} else if (e.estado === 'pendCancelacion') {
 													return (<><button className='btn btn-success' onClick={() => cancelCtaById(e.id, e.doc)}>
 														Cerrar Cta
 													</button>
-													<button className='btn btn-danger' onClick={() => activateCtaById(e.id, e.doc)}>
-														Denegar
-													</button></>)
+														<button className='btn btn-danger' onClick={() => activateCtaById(e.id, e.doc)}>
+															Denegar
+														</button></>)
 												} else if (e.estado === 'cancelada') {
 													return (<button className='btn btn-success' onClick={() => activateCtaById(e.id, e.doc)}>
 														Reactivar
