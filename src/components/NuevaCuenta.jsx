@@ -72,7 +72,7 @@ export function NuevaCuenta() {
 							</tr>
 						</thead>
 						<tbody>
-							{cuentas.filter(ele => ele.estado === 'pendiente').map(e => {
+							{cuentas.filter(ele => ele.estado === 'pendActivacion').map(e => {
 								return (
 									<tr className='text-body'>
 										<th scope="row">{e.cuenta}</th>
