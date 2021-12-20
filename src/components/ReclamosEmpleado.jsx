@@ -47,7 +47,7 @@ const ReclamosEmpleado = () => {
 			montoTrans: t.monto,
 			montoTotalTrans: t.monto + t.cobroBanco,
 		})
-
+		getClaims();
 		// submitData(doc)
 		// alert(id);
 	}
@@ -60,6 +60,7 @@ const ReclamosEmpleado = () => {
 		})
 		// submitData(doc)
 		// alert(id);
+		getClaims();
 	}
 
 	function textoState(e) {
