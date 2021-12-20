@@ -86,8 +86,9 @@ const Registro = ({ empleado }) => {
 					pwd: valores.pwd,
 					fechaExpDoc: valores.fechaExpDoc,
 					fechaNacimiento: valores.fechaNacimiento,
-					status: empleado ? "activa" : '',
-					tipoUsuario: empleado ? "empleado" : ''
+					status: "activa",
+					// status: empleado ? "activa" : '',
+					tipoUsuario: empleado ? "empleado" : 'cliente'
 				})
 					.then((response) => {
 						console.log(`SUCCESS: ${response.data}`)

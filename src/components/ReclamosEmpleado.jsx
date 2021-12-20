@@ -33,6 +33,7 @@ const ReclamosEmpleado = () => {
 					t = r.transfData
 				)
 			}
+			return null;
 		})
 
 		await Axios.post(`${process.env.REACT_APP_URL}/reversePayment`, {

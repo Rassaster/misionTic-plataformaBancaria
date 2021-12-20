@@ -2,7 +2,7 @@ import { Link, useLocation } from 'react-router-dom'
 import RegTransModal from './RegTransModal'
 import '../../node_modules/bootstrap-icons/font/bootstrap-icons.css'
 import style from '../styles/tableSide.module.css'
-import { Cuentas } from './Cuentas'
+// import { Cuentas } from './Cuentas'
 
 const user = [
 	{

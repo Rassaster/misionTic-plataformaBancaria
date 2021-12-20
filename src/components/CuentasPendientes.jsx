@@ -37,6 +37,7 @@ export function CuentasPendientes() {
 			id,
 			estado: (state === "pendActivacion") ? "activa" : (state === "pendCancelacion") ? "desactivada" : ""
 		})
+		console.log(opeOut);
 	}
 
 	async function handleRechazar(id, state) {
@@ -44,7 +45,7 @@ export function CuentasPendientes() {
 			id,
 			estado: (state === "pendActivacion") ? "rechazada" : (state === "pendCancelacion") ? "activa" : ""
 		})
-
+		console.log(opeOut);
 		setPulse(!pulse)
 	}
 

@@ -58,8 +58,8 @@ const RegTransModal = ({ tipoUsr, s, fechaInicio, fechaFin, idCuenta, onUpdate }
 	// 	}
 	// }, [idCuentas])
 
-	function searchTransfers(e) {
-		alert(`Se buscará desde ${inicio} hasta ${fin} de la cuenta ${idCuenta}`)
+	// function searchTransfers(e) {
+	// 	alert(`Se buscará desde ${inicio} hasta ${fin} de la cuenta ${idCuenta}`)
 		// 	let ctaOrigen = cuentas.find(cta => cta.idCuenta === origen);
 		// 	let ctaDestino = cuentas.find(cta => cta.idCuenta === destino);
 		// 	if (ctaOrigen && ctaDestino && saldo >= totalADescontar && totalADescontar >= 0 ){
@@ -68,9 +68,9 @@ const RegTransModal = ({ tipoUsr, s, fechaInicio, fechaFin, idCuenta, onUpdate }
 		// 	} else {
 		// 		alert('No podemos procesar tu solicitud');
 		// 	}
-		closeModal();
-		e.preventDefault();
-	}
+	// 	closeModal();
+	// 	e.preventDefault();
+	// }
 
 	return (
 		<div>

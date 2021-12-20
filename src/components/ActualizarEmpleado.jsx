@@ -1,7 +1,8 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import Axios from 'axios'
 
-import { REG_NOM, REG_CIU, REG_NUMDOC, REG_EMAIL, REG_PWD_VAR } from '../utils/resources'
+import { REG_NOM, REG_CIU, REG_EMAIL, REG_PWD_VAR } from '../utils/resources'
+// import { REG_NUMDOC } from '../utils/resources'
 
 import styles from '../styles/registro.module.css'
 

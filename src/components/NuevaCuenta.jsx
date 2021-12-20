@@ -33,7 +33,7 @@ export function NuevaCuenta() {
 		Axios.post(`${process.env.REACT_APP_URL}/createAccount`, {
 			numDoc: JSON.parse(localStorage.getItem("banAgrario")).userSession,
 			numCuenta: Math.floor(Math.random() * (1000000 - 1)).toString(),
-			estado: "pendiente",
+			estado: "pendActivacion",
 			balance: initialBalance
 		})
 			.then((response) => {
