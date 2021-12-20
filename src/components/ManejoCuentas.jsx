@@ -110,14 +110,14 @@ const ManejoCuentas = () => {
 													return (<button className='btn btn-danger' onClick={() => cancelCtaById(e.id, e.doc)}>
 														Cancelar
 													</button>)
-												} else if (e.estado === 'pendiente apertura') {
+												} else if (e.estado === 'pendActivacion') {
 													return (<><button className='btn btn-success' onClick={() => activateCtaById(e.id, e.doc)}>
 														Abrir Cta
 													</button>
 													<button className='btn btn-danger' onClick={() => rejectCtaById(e.id, e.doc)}>
 														Denegar
 													</button></>)
-												} else if (e.estado === 'pendiente cierre') {
+												} else if (e.estado === 'pendCancelacion') {
 													return (<><button className='btn btn-success' onClick={() => cancelCtaById(e.id, e.doc)}>
 														Cerrar Cta
 													</button>
